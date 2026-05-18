@@ -1,0 +1,13 @@
+app-id: org.ari.KeyboardCleaner
+runtime: org.gnome.Platform
+runtime-version: '49'
+sdk: org.gnome.Sdk
+command: app.py
+modules:
+  - name: keyboard-cleaner
+    buildsystem: simple
+    build-commands:
+      - install -D app.py /app/bin/app.py
+    sources:
+      - type: file
+        path: app.py
