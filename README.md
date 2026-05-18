@@ -23,7 +23,8 @@ Aplikasi desktop berbasis Python/pygame untuk membersihkan keyboard secara aman.
 Tidak ada dependensi pihak ketiga — murni menggunakan pustaka standar Python.
 
 ## terus gimana jalanin nya?
-- nah karna untuk saat ini hanya tersedia di sistem operasi linux, jadi kalau mau jalanin nya buka terminal dari folder project ini dan jalankan perintah
+- download nya lewat bagian 'realese' di sebelah kanan ya. atau langsung aja klik [download v1.0.1](https://github.com/rian18-ari/keyboard-cleaner/releases/tag/v1.0.1)
+- nah karna untuk saat ini hanya tersedia di sistem operasi Linux, jadi kalau mau jalanin nya buka terminal dari folder project ini dan jalankan perintah
 ```bash
 ./install.sh
 ```
