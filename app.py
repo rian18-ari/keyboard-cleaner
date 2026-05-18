@@ -37,18 +37,20 @@ while running:
     screen.fill(current_bg)
 
     # Render Teks ke Layar
-    title_surface = font_title.render("🧹 KEYBOARD CLEANING MODE ACTIVE", True, ACCENT_COLOR)
-    desc_surface1 = font_desc.render("Silakan lap keyboard kamu dengan aman.", True, MUTED_COLOR)
-    desc_surface2 = font_desc.render("Semua input diblokir dari sistem harian.", True, MUTED_COLOR)
-    counter_surface = font_counter.render(f"{key_count} Tombol Dibersihkan", True, TEXT_COLOR)
-    key_surface = font_desc.render(f"Mendeteksi: [ {last_key} ]", True, (238, 153, 160))
-    footer_surface = font_desc.render("Keluar: Tekan Ctrl + Shift + X", True, MUTED_COLOR)
+    title_surface = font_title.render("KEYBOARD CLEANING MODE ACTIVE", True, ACCENT_COLOR)
+    desc_surface1 = font_desc.render("fokus bersihin keyboardmu aja dulu.", True, MUTED_COLOR)
+    desc_surface2 = font_desc.render("keyboardmu juga butuh di bersihin.", True, MUTED_COLOR)
+    desc_surface3 = font_desc.render("(tenang aja, keyboardmu mati kok. jadi jangan takut kepencet yaaa!)", True, MUTED_COLOR)
+    counter_surface = font_counter.render(f"{key_count} tombol kepencet", True, TEXT_COLOR)
+    key_surface = font_desc.render(f"gak sengaja kepencet: [ {last_key} ]", True, (238, 153, 160))
+    footer_surface = font_desc.render("Keluar: pencet Ctrl + Shift + X", True, MUTED_COLOR)
 
     # Posisi Tengah Jendela
     width, height = screen.get_size()
     screen.blit(title_surface, (width//2 - title_surface.get_width()//2, height//3))
     screen.blit(desc_surface1, (width//2 - desc_surface1.get_width()//2, height//3 + 60))
     screen.blit(desc_surface2, (width//2 - desc_surface2.get_width()//2, height//3 + 90))
+    screen.blit(desc_surface3, (width//2 - desc_surface3.get_width()//2, height//3 + 120))
     screen.blit(counter_surface, (width//2 - counter_surface.get_width()//2, height//3 + 160))
     screen.blit(key_surface, (width//2 - key_surface.get_width()//2, height//3 + 220))
     screen.blit(footer_surface, (width//2 - footer_surface.get_width()//2, height - 80))

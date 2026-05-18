@@ -1,50 +1,41 @@
 # 🧹 Keyboard Cleaner
 
-Aplikasi desktop berbasis Python/Tkinter untuk membersihkan keyboard secara aman. Saat dijalankan, aplikasi ini masuk ke mode layar penuh dan memblokir semua input keyboard agar tidak terdeteksi oleh sistem — sehingga kamu bisa membersihkan keyboard tanpa khawatir memicu tombol secara tidak sengaja.
+Aplikasi desktop berbasis Python/pygame untuk membersihkan keyboard secara aman. Saat dijalankan, aplikasi ini masuk ke mode layar penuh dan memblokir semua input keyboard agar tidak terdeteksi oleh sistem — sehingga kamu bisa membersihkan keyboard tanpa khawatir memicu tombol secara tidak sengaja.
 
-## Fitur
+## bagaimana ini bekerja?
 
-- **Layar penuh & always on top** — menutup seluruh layar agar tidak terganggu aplikasi lain
-- **Pemblokiran keyboard** — setiap tombol yang ditekan dicegat dan tidak diteruskan ke OS
-- **Penghitung real-time** — menampilkan jumlah tombol yang sudah dibersihkan
-- **Indikator tombol langsung** — menampilkan tombol terakhir yang terdeteksi
-- **Efek visual flash** — latar belakang berkedip tipis setiap kali tombol ditekan sebagai konfirmasi visual
-- **Keluar cepat** — tekan `Ctrl + Shift + X` untuk keluar aplikasi
+1. kamu menjalankan aplikasi nya
+2. aplikasi akan membuat layar penuh dan memblokir semua input keyboard
+3. kamu bisa membersihkan keyboard kamu dengan aman
+4. aplikasi akan menampilkan jumlah tombol yang sudah dibersihkan
+5. aplikasi akan menampilkan tombol terakhir yang terdeteksi
+6. aplikasi akan menampilkan efek flash setiap kali tombol ditekan
+7. kamu bisa keluar aplikasi dengan menekan Ctrl + Shift + X
 
-## Persyaratan
+## Apakah ini aman buat sistem di laptop ku?
+- Ya, pasti aman banget! karna aplikasi ini tidak bekerja di level hardware, dan tidak mematikan sistem keyboard. aplikasi ini hanya memblokir input keyboard agar tidak terdeteksi oleh sistem 
 
-- **Python 3.6+**
-- **Tkinter** (biasanya sudah termasuk bawaan Python; di Debian/Ubuntu bisa diinstal via `sudo apt install python3-tk`)
-
+## Sebelum menjalankan aplikasi nya, apa yang harus dilakukan/dipastikan?
+- pastikan di laptop kamu ada library dari python, yaitu
+  - python v.3.14++
+  - pygame (cara menginstallnya: `sudo apt install python3-pygame`)
+  
 Tidak ada dependensi pihak ketiga — murni menggunakan pustaka standar Python.
 
-## Cara Menjalankan
-
+## terus gimana jalanin nya?
+- nah karna untuk saat ini hanya tersedia di sistem operasi linux, jadi kalau mau jalanin nya buka terminal dari folder project ini dan jalankan perintah
 ```bash
-python3 app.py
+./install.sh
 ```
+ * **perintah ini akan membuat shortcut di desktop kamu, jadi kamu bisa menjalankan nya dengan mudah**
 
-Atau buat menjadi executable:
+ sekarang, shortcut nya udah ada di desktop kamu, kamu tinggal klik 2x untuk menjalankan nya!
 
-```bash
-chmod +x app.py
-./app.py
-```
+## warna nya bosen, kalo mau ganti gimana?
 
-## Cara Pakai
+- bisa banget! kamu tinggal buka file `app.py` terus cari bagian `__init__`:
 
-1. Jalankan aplikasi
-2. Layar akan berubah menjadi gelap dengan judul **Keyboard Cleaning Mode Active**
-3. Lap/bersihkan keyboard kamu dengan aman
-4. Setiap tombol yang tertekan akan:
-   - Menambah angka pada penghitung
-   - Menampilkan nama tombol yang terdeteksi
-   - Memberi efek flash pada layar
-5. Tekan **Ctrl + Shift + X** untuk keluar
-
-## Kustomisasi
-
-Warna dan font dapat diubah langsung di `app.py` pada bagian `__init__`:
+### detail nya di tabel ini yaaa:
 
 | Variabel     | Default   | Keterangan           |
 | ------------ | --------- | -------------------- |
@@ -53,8 +44,6 @@ Warna dan font dapat diubah langsung di `app.py` pada bagian `__init__`:
 | `accent_color` | `#8bd5ca` | Warna judul        |
 | `muted_color` | `#939ab7` | Warna deskripsi/footer |
 
-Palet warna terinspirasi dari [Catppuccin Macchiato](https://github.com/catppuccin/catppuccin).
+*ini warna nya terinspirasi dari catppuccin macchiato ya, mungkin kamu bisa cek [catppuccin](https://github.com/catppuccin/catppuccin)
 
-## Lisensi
-
-MIT
+### *created by ari_chii*
