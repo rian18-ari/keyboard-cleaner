@@ -1,10 +1,11 @@
 app-id: org.ari.KeyboardCleaner
 runtime: org.gnome.Platform
-runtime-version: '49'
+runtime-version: '50'
 sdk: org.gnome.Sdk
 command: app.py
 finish-args:
-  - --socket=x11
+  - --socket=fallback-x11
+  - --share=ipc
   - --socket=wayland
   - --socket=pulseaudio # <--- Ini kunci penyelamat untuk mengatasi error audio tadi
   - --device=dri
